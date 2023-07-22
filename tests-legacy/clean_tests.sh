@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm -rf ravencoin-bin
-rm -rf ravencoin-testnet-bin
+rm -rf neurai-bin
+rm -rf neurai-testnet-bin

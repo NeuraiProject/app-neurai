@@ -244,8 +244,8 @@ typedef enum btchip_coin_flags_e {
 
 
 typedef enum btchip_coin_kind_e {
-    COIN_KIND_RAVENCOIN,
-    COIN_KIND_RAVENCOIN_TESTNET
+    COIN_KIND_NEURAI,
+    COIN_KIND_NEURAI_TESTNET
 } btchip_coin_kind_t;
 
 typedef struct btchip_altcoin_config_s {

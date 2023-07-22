@@ -25,20 +25,20 @@ jobs:
 
       - name: Build
         run: |
-          make DEBUG=0 COIN=ravencoin && mv bin/ ravencoin-bin/
+          make DEBUG=0 COIN=neurai && mv bin/ neurai-bin/
           make clean
-          make DEBUG=0 COIN=ravencoin_testnet && mv bin/ ravencoin-testnet-bin/
-      - name: Upload Ravencoin app binary
+          make DEBUG=0 COIN=neurai_testnet && mv bin/ neurai-testnet-bin/
+      - name: Upload Neurai app binary
         uses: actions/upload-artifact@v2
         with:
-          name: ravencoin-app
-          path: ravencoin-bin
+          name: neurai-app
+          path: neurai-bin
 
-      - name: Upload Ravencoin Testnet app binary
+      - name: Upload Neurai Testnet app binary
         uses: actions/upload-artifact@v2
         with:
-          name: ravencoin-testnet-app
-          path: ravencoin-testnet-bin
+          name: neurai-testnet-app
+          path: neurai-testnet-bin
 
   job_unit_test:
     name: Unit test
@@ -100,8 +100,8 @@ jobs:
       - name: Download Bitcoin Testnet app binary
         uses: actions/download-artifact@v2
         with:
-          name: ravencoin-testnet-app
-          path: tests-legacy/ravencoin-testnet-bin
+          name: neurai-testnet-app
+          path: tests-legacy/neurai-testnet-bin
 
       - name: Run tests
         run: |
